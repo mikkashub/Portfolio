@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mikka Robinos — UX/UI Designer</title>
+<link href="https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <span class="nav-name">Mikka Robinos</span>
+  <div class="nav-links">
+    <a onclick="showPage('home')" id="nav-home" class="active">home</a>
+    <a onclick="showPage('work')" id="nav-work">work</a>
+    <a onclick="showPage('about')" id="nav-about">about</a>
+    <a onclick="showPage('contact')" id="nav-contact">contact</a>
+    <a onclick="showPage('resume')" id="nav-resume">resume</a>
+  </div>
+</nav>
+
+<!-- ═══════════════ HOME ═══════════════ -->
+<div id="home" class="page active">
+  <div class="home-content">
+    <div class="hero-section">
+      <img class="hero-mascot" src="shark-cat.png" alt="shark cat mascot">
+      <div class="hero-text">ux/ui designer<br>based in virginia.</div>
+    </div>
+
+    <div class="featured-section">
+      <p class="featured-title">Featured Work:</p>
+      <div class="cards-grid">
+
+        <div class="work-card">
+          <div class="card-img">
+            <div class="card-placeholder">coming soon...</div>
+          </div>
+          <p class="card-label">Coming soon...</p>
+        </div>
+
+        <div class="work-card" onclick="showPage('work')">
+          <div class="card-img">
+            <div class="card-genius">
+              <div class="genius-mockup">
+                <div class="genius-logo">
+                  <div class="genius-icon"></div>
+                  <span class="genius-title"></span></span>
+                </div>
+                <div class="genius-subtitle"></div>
+                <div class="genius-welcome"></div>
+                <div class="genius-field"></div>
+                <div class="genius-field"></div>
+                <div class="genius-btn"></div>
+              </div>
+            </div>
+          </div>
+          <p class="card-label">GeniusEats — UX Design + Full-Stack Build</p>
+        </div>
+
+        <div class="work-card" onclick="showPage('mini-projects')">
+          <div class="card-img">
+            <div class="card-playlist"></div>
+          </div>
+          <p class="card-label">Mini Web Design Projects</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="home-footer">
+      <p>mikka.robinos@gmail.com</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ WORK ═══════════════ -->
+<div id="work" class="page">
+  <div class="work-content">
+    <div style="position:relative;">
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-logo-circle">🌿</div>
+          <span class="project-logo-title">Genius<span style="color:#2e8b6a">Eats</span></span>
+        </div>
+        <div class="project-tagline">
+          Smart meals, <em>tailored for you.</em>
+          <span class="tech-btn" onclick="document.querySelector('.tech-stack-card').scrollIntoView({behavior:'smooth'})">view tech stack</span>
+        </div>
+        <p class="project-desc">GeniusEats is an AI-powered meal planning app that generates personalized recipes based on your dietary preferences, allergens, and weekly grocery budget</p>
+        <div class="dot-nav">
+          <div class="dot active"></div>
+          <div class="dot mid"></div>
+          <div class="dot empty"></div>
+        </div>
+      </div>
+
+      <div class="view-more-btn">
+        view more work (<br>
+        <span class="view-more-sub">coming soon...</span>
+      </div>
+
+      <!-- Cat stack illustration -->
+      <div class="cats-illustration">
+        <img src="cat-stack.png" alt="illustration of stacked cats" style="width:100%"; transform: scaleX(-1);>
+      </div>
+
+    </div>
+
+    <div class="walkthrough-section">
+      <div class="walkthrough-title">UI WALKTHROUGH</div>
+
+      <div class="walkthrough-grid">
+        <div>
+          <div class="wt-group-title">Main UI</div>
+          <div class="btn-grid">
+            <button class="ui-btn dark">view<br>Login</button>
+            <button class="ui-btn light">view<br>Create<br>Account</button>
+            <button class="ui-btn mid">view<br>Dietary<br>Survey</button>
+            <button class="ui-btn dark">view<br>Home<br>Page</button>
+            <button class="ui-btn light">view<br>Pantry</button>
+          </div>
+        </div>
+        <div>
+          <div class="wt-group-title">Profile UI</div>
+          <div class="btn-grid" style="margin-bottom:24px;">
+            <button class="ui-btn dark">view<br>Profile<br>empty<br>state</button>
+            <button class="ui-btn dark" style="background:#3d7a60;">view Profile<br>Preferences</button>
+          </div>
+          <div class="btn-grid">
+            <button class="ui-btn dark">view Saved<br>meal card</button>
+            <button class="ui-btn light">view Saved<br>meal detail</button>
+            <button class="ui-btn mid">view Saved<br>meals<br>empty</button>
+            <span style="font-family:var(--font);font-size:18px;align-self:center;">Saved<br>meals UI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-section">
+      <div class="tech-stack-card">
+        <div class="section-label">TECH STACK</div>
+        <div class="tech-row">
+          <span>• HTML / CSS / JavaScript</span>
+          <span class="tech-tag">Frontend</span>
+        </div>
+        <div class="tech-row">
+          <span>• AI API integration</span>
+          <span class="tech-tag">Meal generation</span>
+        </div>
+        <div class="tech-row">
+          <span>• LocalStorage / REST API</span>
+          <span class="tech-tag">Persistence</span>
+        </div>
+        <div class="tech-row">
+          <span>• Multi-page architecture</span>
+          <span class="tech-tag">Routing</span>
+        </div>
+      </div>
+
+      <div class="learned-card">
+        <div class="learned-title">What I learned.</div>
+        <div class="learned-item">
+          <div class="learned-item-title">Survey ID system</div>
+          <p>Built a portable dietary preference system where users save their survey results with a numeric ID, then load those preferences on their profile from any device or session.</p>
+        </div>
+        <div class="learned-item">
+          <div class="learned-item-title">Contextual AI prompting</div>
+          <p>Meal generation is personalized by combining meal type, skill level, and free-text special requests into a structured prompt, resulting in recipes that feel uniquely tailored.</p>
+        </div>
+        <div class="learned-item">
+          <div class="learned-item-title">Consistent design language</div>
+          <p>Maintained a cohesive visual system across all five pages — warm neutral backgrounds, a single green accent, and minimal card-based layouts throughout.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════ MINI PROJECTS ═══════════════ -->
+<div id="mini-projects" class="page">
+  <svg class="squiggle-bg" viewBox="0 0 1280 900" preserveAspectRatio="xMidYMid slice">
+    <path class="squiggle" d="M-50,200 C100,150 200,300 350,250 S550,150 700,200 S900,300 1100,220 S1300,150 1400,200"/>
+    <path class="squiggle" d="M-50,400 C150,350 250,500 400,450 S600,350 750,400 S950,500 1150,420 S1350,350 1450,400"/>
+    <path class="squiggle" d="M100,100 C200,50 300,200 500,150 S700,50 900,100 S1100,200 1300,120"/>
+    <path class="squiggle" d="M0,600 C200,550 350,700 550,640 S750,540 950,600 S1150,700 1350,620"/>
+  </svg>
+
+  <div class="mini-content">
+    <p class="mini-title">Mini Web Design Projects</p>
+
+    <div class="mini-grid">
+    <div class="mini-project">
+      <div class="mini-project-title">Music Player</div>
+      <div class="mini-card">
+        <div class="music-player-card"></div>
+      </div>
+    </div>
+
+    <div class="mini-project">
+      <div class="mini-project-title">LyricsSearch</div>
+      <div class="mini-card">
+        <div class="lyrics-card"></div>
+      </div>
+    </div>
+  </div>
+
+    <a href="https://github.com/mikkashub" target="_blank" class="github-link">
+      github: https://github.com/mikkashub
+    </a>
+  </div>
+</div>
+
+<!-- ═══════════════ ABOUT ═══════════════ -->
+<div id="about" class="page">
+  <div class="about-content">
+    <div class="about-photo">
+      <img src="about-photo.jpg" alt="photo of Mikka" class="about-img">
+    </div>
+    <div class="about-text">
+      <div class="about-hi">Hi I'm Mikka!</div>
+      <p class="about-intro">a Computer Science student at VCU with minors in Artificial Intelligence and Psychology, graduating Fall 2026.</p>
+      <p class="about-body">I'm drawn to the intersection of technology and human experience. My mix of CS, AI, and Psychology gives me a unique lens for design — I care just as much about why people use products as how they use them. And because I can code, I don't just design experiences, I can build them too.</p>
+      <p class="about-body">I've worked across federal agencies and real estate tech, and most recently built GeniusEats, a full-stack AI-powered meal planning app, from scratch. I'm looking for opportunities to grow as a UX/UI designer and create products that genuinely make people's lives easier.</p>
+
+      <p class="fun-facts-title">Fun facts about me:</p>
+      <ul class="fun-facts-list">
+        <li data-num="1">I love to travel, and I've been to Germany, France, and soon Japan!</li>
+        <li data-num="2">I absolutely love any kind of sweet treats (guilty pleasure).</li>
+        <li data-num="3">Minecraft is my favorite game (as someone who played it for 10 years).</li>
+      </ul>
+
+      <p class="hobbies-title">When I'm not working, you can find me:</p>
+      <ul class="hobbies-list">
+        <li data-num="1">Playing the piano</li>
+        <li data-num="2">Reading a book</li>
+        <li data-num="3">Cooking/Baking</li>
+        <li data-num="4">Playing chess/sudoku/NYT Games</li>
+      </ul>
+    </div>
+    <div class="stamps">
+        <img src="stamps.png" alt="photo" style="width:100%;">
+      </div>
+  </div>
+</div>
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<div id="contact" class="page">
+  <div class="contact-content">
+    <div class="contact-left">
+      <img src="flower.png" alt="contact background" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+      <div class="contact-overlay-card">
+        <div class="collab-title">Let's collaborate!</div>
+        <p class="collab-body">I'm always open and on the look out for new opportunities with designers, developers, or let's just connect and chat!</p>
+        <p class="collab-contact-line">Email: mikka.robinos@gmail.com</p>
+        <p class="collab-contact-line">LinkedIn: <a href="www.linkedin.com/in/mikka-robinos-461936266" target="_blank" style="color:var(--black);font-weight:bold;">in</a></p>
+      </div>
+    </div>
+
+    <div class="contact-right">
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First name</label>
+            <input class="form-input" placeholder="...">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input class="form-input" placeholder="...">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input class="form-input" type="email" placeholder="...">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea" placeholder="..."></textarea>
+        </div>
+        <button class="submit-btn" onclick="alert('Message sent!')">send</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ RESUME ═══════════════ -->
+<div id="resume" class="page">
+  <div class="resume-wrapper">
+    <div class="resume-name">Mikka Robinos</div>
+    <div class="resume-contact">
+      (571) 882-3551 / <a href="mailto:robiosma@vcu.edu">robiosma@vcu.edu</a> / Alexandria, VA
+    </div>
+
+    <div class="resume-section-title">EDUCATION</div>
+    <div class="resume-entry">
+      <div class="resume-entry-header">
+        <span>Virginia Commonwealth University</span>
+        <span>Richmond, VA</span>
+      </div>
+      <div class="resume-entry-header" style="font-weight:normal;">
+        <em>Bachelor of Arts in Computer Science</em>
+        <span>Expected Fall 2026</span>
+      </div>
+      <p>Major: Computer Science</p>
+      <p>Minors: Artificial Intelligence &amp; Psychology</p>
+      <p>GPA: 3.6</p>
+    </div>
+
+    <div class="resume-section-title">TECHNICAL SKILLS</div>
+    <div class="resume-skills-row">
+      <strong>Data Processing:</strong> Python, Java, C, Excel, JavaScript<br>
+      <strong>Web Development:</strong> HTML, CSS, REST APIs, Spring Boot, Javalin<br>
+      <strong>AI/Cloud Integration:</strong> Groq Cloud AI<br>
+      <strong>Databases:</strong> SQLite, JPA/Hibernate
+    </div>
+
+    <div class="resume-section-title">WORK EXPERIENCE</div>
+    <div class="resume-entry">
+      <div class="resume-entry-header">
+        <span>Intern / Mason at Van Dorn / Urban Alliance</span>
+        <span>June 2025 – August 2025</span>
+      </div>
+      <ul>
+        <li>Accelerated lease renewals and maintenance requests by driving resident adoption of online portals and mobile apps, effectively reducing service delays.</li>
+        <li>Managed sensitive tenant data and legal documentation with 100% accuracy, ensuring strict adherence to Fair Housing regulations.</li>
+        <li>Resolved complex resident inquiries and maintained audit-ready digital records for a large-scale leasing office.</li>
+      </ul>
+    </div>
+    <div class="resume-entry">
+      <div class="resume-entry-header">
+        <span>Intern / United States Patent &amp; Trademark Office Federal Agency / Urban Alliance</span>
+        <span>September 2022 – July 2023</span>
+      </div>
+      <ul>
+        <li>Supported senior leaders in executing global IP initiatives and maintaining relationships with international stakeholders.</li>
+        <li>Evaluated the organizational structures of foreign IP offices to facilitate the selection of international academy partners.</li>
+        <li>Represented agency interests by distilling youth outreach metrics into formal briefings for United Nations delegates.</li>
+        <li>Produced complex visual dashboards and maintained large-scale datasets using Excel to ensure 100% data accuracy for leadership reviews.</li>
+      </ul>
+    </div>
+
+    <div class="resume-section-title">PROJECTS</div>
+    <div class="resume-entry">
+      <div class="resume-entry-header"><span>GeniusEats | Java, SpringBoot, Javalin, SQLite, Groq AI, HTML/CSS/JS</span></div>
+      <ul>
+        <li>Designed and built a full-stack AI-powered meal planning web app for users with dietary restrictions.</li>
+        <li>Implemented a dual-server architecture using Spring Boot (port 8080) for authentication and meal generation, and Javalin (port 7070) for survey and pantry management.</li>
+        <li>Integrated the Groq Cloud AI API to dynamically generate personalized recipes based on user pantry ingredients, dietary preferences, and allergens stored in SQLite.</li>
+        <li>Built a multi-page frontend with login, dietary survey, pantry manager, AI meal generator, saved meals, and user profile pages.</li>
+      </ul>
+    </div>
+
+    <div class="resume-section-title">ACTIVITIES &amp; SOCIETIES</div>
+    <div class="resume-entry">
+      <div class="resume-entry-header">
+        <span>Member / Strategic Board Game Organization</span>
+        <span>August 2025–Present</span>
+      </div>
+      <div class="resume-entry-header">
+        <span>Member / Asian American &amp; Pacific Islander Affinity</span>
+        <span>August 2025–Present</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
