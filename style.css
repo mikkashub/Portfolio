@@ -1,4 +1,4 @@
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
     --font: 'Liu Jian Mao Cao', cursive;
@@ -43,7 +43,7 @@
   .nav-links a.active { text-decoration: underline; text-shadow: 0 2px 4px rgba(0,0,0,0.18); }
 
   /* ── PAGES ── */
-  .page { display: none; min-height: 100vh; padding-top: 72px; }
+  .page { display: none; min-height: 100vh; padding-top: 72px; position: relative; overflow: hidden;}
   .page.active { display: block; }
 
   /* ════════════════════════════
@@ -400,21 +400,30 @@
 
   /* Mini Projects sub-page */
   #mini-projects {
-    min-height: 100vh;
+    height: calc(100vh - 72px);
     background: #fff;
     position: relative;
     overflow: hidden;
+    flex-direction: column;
   }
 
   .squiggle-bg {
-    position: fixed;
+    position: absolute;
     inset: 0;
     pointer-events: none;
     z-index: 0;
   }
 
-  .mini-content { position: relative; z-index: 1; padding: 40px; }
-  .mini-title { font-size: 38px; text-align: center; margin-bottom: 8px; }
+  .mini-content { 
+    position: relative; 
+    min-height: 95vh;
+    z-index: 1; 
+    padding: 40px; 
+    flex-direction: column;
+    display: flex;
+    flex: 1;
+  }
+  .mini-title { font-size: 50px; text-align: center; margin-bottom: 8px; }
   .mini-click-hint { font-size: 18px; text-align: center; color: #888; margin-bottom: 40px; font-family: sans-serif; }
 
   .mini-grid {
@@ -423,9 +432,10 @@
     gap: 32px;
     max-width: 1100px;
     margin: 0 auto;
+    width: 100%;
   }
 
-  .mini-project-title { font-size: 30px; margin-bottom: 16px; margin-top: 50px; }
+  .mini-project-title { font-size: 35px; margin-bottom: 16px; margin-top: 50px; }
 
   .mini-card {
     border-radius: 20px;
@@ -444,27 +454,38 @@
     background: url('lyricssearch.png') center/cover;
   }
 
-    .music-player-card,
+  .music-player-card,
   .lyrics-card {
     background-size: cover;
     background-position: center;
     padding: 0;
-    min-height: 360px;
+    min-height: 460px;
   }
-
+  .github-link-wrapper {
+    position: sticky;
+    bottom: 0;
+    margin-top: auto;
+    padding: 24px 0;
+    text-align: center;
+  }
 
   .github-link {
-    margin-top: 48px;
-    font-size: 18px;
-    font-family: var(--font);
-    color: var(--black);
-    text-decoration: none;
     display: inline-block;
-    background: rgba(0,0,0,0.05);
-    padding: 10px 20px;
-    border-radius: 8px;
-    border: 1px solid rgba(0,0,0,0.1);
+    background: #edecec;
+    color: black;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-family: var(--font);
+    font-size: 20px;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.15s;
   }
+
+  .github-link:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+  }
+
 
   /* ════════════════════════════
      ABOUT PAGE

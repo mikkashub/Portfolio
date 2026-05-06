@@ -33,14 +33,13 @@
     <div class="featured-section">
       <p class="featured-title">Featured Work:</p>
       <div class="cards-grid">
-
-        <div class="work-card">
+        <div class="work-card" onclick="showPage('mini-projects')">
           <div class="card-img">
-            <div class="card-placeholder">coming soon...</div>
+            <div class="card-playlist"></div>
           </div>
-          <p class="card-label">Coming soon...</p>
+          <p class="card-label">Mini Web Design Projects</p>
         </div>
-
+        
         <div class="work-card" onclick="showPage('work')">
           <div class="card-img">
             <div class="card-genius">
@@ -60,11 +59,11 @@
           <p class="card-label">GeniusEats — UX Design + Full-Stack Build</p>
         </div>
 
-        <div class="work-card" onclick="showPage('mini-projects')">
+        <div class="work-card">
           <div class="card-img">
-            <div class="card-playlist"></div>
+            <div class="card-placeholder">coming soon...</div>
           </div>
-          <p class="card-label">Mini Web Design Projects</p>
+          <p class="card-label">Coming soon...</p>
         </div>
 
       </div>
@@ -128,12 +127,12 @@
           <div class="wt-group-title">Profile UI</div>
           <div class="btn-grid" style="margin-bottom:24px;">
             <button class="ui-btn dark" onclick="openOverlay('profile-empty.png')">view<br>Profile<br>empty<br>state</button>
-            <button class="ui-btn dark" onclick="openOverlay('profile.png')" style="background:#3d7a60;">view Profile<br>Preferences</button>
+            <button class="ui-btn dark" onclick="openOverlay('profile.png')"style="background:#3d7a60;">view Profile<br>Preferences</button>
           </div>
           <div class="btn-grid">
-            <button class="ui-btn dark" onclick="openOverlay('saved-meal-card.png')">view Saved<br>meal card</button>
-            <button class="ui-btn light" onclick="openOverlay('saved-meal-detail.png')">view Saved<br>meal detail</button>
-            <button class="ui-btn mid" onclick="openOverlay('saved-meals-empty.png')">view Saved<br>meals<br>empty</button>
+            <button class="ui-btn dark">view Saved<br>meal card</button>
+            <button class="ui-btn light">view Saved<br>meal detail</button>
+            <button class="ui-btn mid">view Saved<br>meals<br>empty</button>
             <span style="font-family:var(--font);font-size:50px;align-self:center;">Saved<br>meals UI</span>
           </div>
         </div>
@@ -194,25 +193,28 @@
     <p class="mini-title">Mini Web Design Projects</p>
 
     <div class="mini-grid">
-    <div class="mini-project">
-      <div class="mini-project-title">Music Player</div>
-      <div class="mini-card">
-        <div class="music-player-card"></div>
+      <div class="mini-project">
+        <div class="mini-project-title">Music Player</div>
+        <div class="mini-card" onclick="window.open('https://mikkashub.github.io/Music-Player/', '_blank')">
+          <div class="music-player-card"></div>
+        </div>
       </div>
+
+      <div class="mini-project">
+        <div class="mini-project-title">LyricsSearch</div>
+        <div class="mini-card" onclick="window.open('https://mikkashub.github.io/Lyrics-Search-App/', '_blank')">
+          <div class="lyrics-card"></div>
+        </div>
+      </div>
+    </div>                       <!-- mini-grid closes here -->
+
+    <div class="github-link-wrapper">
+      <a href="https://github.com/mikkashub" target="_blank" class="github-link">
+        github: https://github.com/mikkashub
+      </a>
     </div>
 
-    <div class="mini-project">
-      <div class="mini-project-title">LyricsSearch</div>
-      <div class="mini-card">
-        <div class="lyrics-card"></div>
-      </div>
-    </div>
-  </div>
-
-    <a href="https://github.com/mikkashub" target="_blank" class="github-link">
-      github: https://github.com/mikkashub
-    </a>
-  </div>
+  </div>                         <!-- mini-content closes here -->
 </div>
 
 <!-- ═══════════════ ABOUT ═══════════════ -->
@@ -368,21 +370,6 @@
   </div>
 </div>
 
-<div id="img-overlay" onclick="closeOverlay()" style="
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.7);
-  z-index:999;
-  align-items:center;
-  justify-content:center;
-">
-  <img id="overlay-img" src="" style="
-    max-height:90vh;
-    max-width:90vw;
-    border-radius:12px;
-    box-shadow:0 8px 40px rgba(0,0,0,0.4);
-  ">
 <script src="script.js"></script>
 </body>
 </html>

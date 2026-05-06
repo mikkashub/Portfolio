@@ -1,11 +1,11 @@
-  function showPage(id) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-    const navEl = document.getElementById('nav-' + id);
-    if (navEl) navEl.classList.add('active');
-    window.scrollTo(0, 0);
-  }
+function showPage(id) {
+  window.scrollTo({ top: 0, behavior: 'instant' });  // ← move this FIRST
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const navEl = document.getElementById('nav-' + id);
+  if (navEl) navEl.classList.add('active');
+}
 
   function sendEmail() {
   const firstName = document.getElementById('first-name').value;
