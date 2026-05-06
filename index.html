@@ -6,6 +6,8 @@
 <title>Mikka Robinos — UX/UI Designer</title>
 <link href="https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init("z8GMUWpQSMn1uNSPL");</script>
 </head>
 <body>
 
@@ -96,14 +98,14 @@
         </div>
       </div>
 
-      <div class="view-more-btn">
-        view more work (<br>
+      <div class="view-more-btn" onclick="showPage('mini-projects')">
+        view more work !<br>
         <span class="view-more-sub">coming soon...</span>
       </div>
 
       <!-- Cat stack illustration -->
       <div class="cats-illustration">
-        <img src="cat-stack.png" alt="illustration of stacked cats" style="width:100%"; transform: scaleX(-1);>
+        <img src="cat-stack.png" alt="illustration of stacked cats" style="width:100%; transform: scaleX(-1);">
       </div>
 
     </div>
@@ -115,24 +117,24 @@
         <div>
           <div class="wt-group-title">Main UI</div>
           <div class="btn-grid">
-            <button class="ui-btn dark">view<br>Login</button>
-            <button class="ui-btn light">view<br>Create<br>Account</button>
-            <button class="ui-btn mid">view<br>Dietary<br>Survey</button>
-            <button class="ui-btn dark">view<br>Home<br>Page</button>
-            <button class="ui-btn light">view<br>Pantry</button>
+            <button class="ui-btn dark" onclick="openOverlay('login.png')">view<br>Login</button>
+            <button class="ui-btn light" onclick="openOverlay('create-account.png')">view<br>Create<br>Account</button>
+            <button class="ui-btn mid" onclick="openOverlay('dietary-survey.png')">view<br>Dietary<br>Survey</button>
+            <button class="ui-btn dark" onclick="openOverlay('home-page.png')">view<br>Home<br>Page</button>
+            <button class="ui-btn light" onclick="openOverlay('pantry.png')">view<br>Pantry</button>
           </div>
         </div>
         <div>
           <div class="wt-group-title">Profile UI</div>
           <div class="btn-grid" style="margin-bottom:24px;">
-            <button class="ui-btn dark">view<br>Profile<br>empty<br>state</button>
-            <button class="ui-btn dark" style="background:#3d7a60;">view Profile<br>Preferences</button>
+            <button class="ui-btn dark" onclick="openOverlay('profile-empty.png')">view<br>Profile<br>empty<br>state</button>
+            <button class="ui-btn dark" onclick="openOverlay('profile.png')" style="background:#3d7a60;">view Profile<br>Preferences</button>
           </div>
           <div class="btn-grid">
-            <button class="ui-btn dark">view Saved<br>meal card</button>
-            <button class="ui-btn light">view Saved<br>meal detail</button>
-            <button class="ui-btn mid">view Saved<br>meals<br>empty</button>
-            <span style="font-family:var(--font);font-size:18px;align-self:center;">Saved<br>meals UI</span>
+            <button class="ui-btn dark" onclick="openOverlay('saved-meal-card.png')">view Saved<br>meal card</button>
+            <button class="ui-btn light" onclick="openOverlay('saved-meal-detail.png')">view Saved<br>meal detail</button>
+            <button class="ui-btn mid" onclick="openOverlay('saved-meals-empty.png')">view Saved<br>meals<br>empty</button>
+            <span style="font-family:var(--font);font-size:50px;align-self:center;">Saved<br>meals UI</span>
           </div>
         </div>
       </div>
@@ -264,22 +266,22 @@
         <div class="form-row">
           <div class="form-group">
             <label class="form-label">First name</label>
-            <input class="form-input" placeholder="...">
+            <input class="form-input" id="first-name" placeholder="...">
           </div>
           <div class="form-group">
             <label class="form-label">Last Name</label>
-            <input class="form-input" placeholder="...">
+            <input class="form-input" id="last-name" placeholder="...">
           </div>
         </div>
         <div class="form-group">
           <label class="form-label">Email</label>
-          <input class="form-input" type="email" placeholder="...">
+          <input class="form-input" type="email" id="email" placeholder="...">
         </div>
         <div class="form-group">
           <label class="form-label">Message</label>
-          <textarea class="form-textarea" placeholder="..."></textarea>
+          <textarea class="form-textarea" id="message" placeholder="..."></textarea>
         </div>
-        <button class="submit-btn" onclick="alert('Message sent!')">send</button>
+        <button class="submit-btn" onclick="sendEmail()">send</button>
       </div>
     </div>
   </div>
@@ -366,6 +368,21 @@
   </div>
 </div>
 
+<div id="img-overlay" onclick="closeOverlay()" style="
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  z-index:999;
+  align-items:center;
+  justify-content:center;
+">
+  <img id="overlay-img" src="" style="
+    max-height:90vh;
+    max-width:90vw;
+    border-radius:12px;
+    box-shadow:0 8px 40px rgba(0,0,0,0.4);
+  ">
 <script src="script.js"></script>
 </body>
 </html>

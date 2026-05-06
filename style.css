@@ -52,7 +52,8 @@
   #home {
     background: url('https://i.imgur.com/Q8HYWQF.jpeg') center/cover;
     background-color: #c8dce8;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
     position: relative;
   }
 
@@ -69,7 +70,9 @@
   .home-content {
     position: relative;
     z-index: 1;
-    min-height: calc(100vh - 72px);
+    height: calc(100vh - 72px);
+    display: flex;
+    flex-direction: column;
   }
 
   .hero-section {
@@ -97,6 +100,7 @@
     position: relative;
     z-index: 1;
     padding: 20px 60px 40px;
+    flex: 1;
   }
 
   .featured-title {
@@ -193,14 +197,14 @@
     pointer-events: none;
   }
 
-  .work-content { position: relative; z-index: 1; padding: 40px; }
+  .work-content { position: relative; z-index: 1; padding: 24px 40px; }
 
   .project-card {
     background: rgba(255,255,255,0.85);
     border-radius: 16px;
-    padding: 32px;
-    max-width: 520px;
-    margin: 0 auto 40px auto;
+    padding: 50px;
+    max-width: 560px;
+    margin: 0 auto 24px auto;
     box-shadow: 0 2px 20px rgba(0,0,0,0.06);
   }
 
@@ -219,12 +223,12 @@
     font-size: 18px; color: #fff;
   }
 
-  .project-logo-title { font-size: 28px; font-family: sans-serif; font-weight: bold; }
+  .project-logo-title { font-size: 50px; font-family: sans-serif; font-weight: bold; }
   .project-logo-title span { color: var(--green-mid); }
 
   .project-tagline {
     font-family: sans-serif;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
     margin: 10px 0 4px;
     color: var(--black);
@@ -239,14 +243,14 @@
     border-radius: 20px;
     font-size: 14px;
     font-family: sans-serif;
-    margin-left: 12px;
     cursor: pointer;
+    margin-top: 8px;
     vertical-align: middle;
   }
 
   .project-desc {
     font-family: sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
     color: #444;
     margin-top: 12px;
@@ -268,14 +272,14 @@
 
   .view-more-btn {
     position: absolute;
-    right: 20px;
+    left: 0px;
     top: 20px;
     background: rgba(255,255,255,0.7);
     border: 1px solid rgba(0,0,0,0.15);
     border-radius: 24px;
-    padding: 10px 22px;
+    padding: 30px 32px;
     font-family: var(--font);
-    font-size: 18px;
+    font-size: 26px;
     cursor: pointer;
     text-align: center;
     line-height: 1.3;
@@ -284,50 +288,51 @@
 
   .cats-illustration {
     position: absolute;
-    right: 20px;
-    top: 80px;
-    width: 110px;
+    right: -60px;
+    top: 24px;
+    width: 200px;
     z-index: 1;
   }
 
-  .walkthrough-section { margin-top: 20px; padding: 0 40px;}
+  .walkthrough-section { margin-top: 8px; padding: 0;}
   .walkthrough-title {
+    text-align: left;
+    margin-bottom: 10px;
     font-family: sans-serif;
-    font-size: 22px;
+    font-size: 35px;
     font-weight: bold;
     color: var(--green-mid);
     letter-spacing: 1px;
-    margin-bottom: 20px;
     text-align: center;
   }
 
   .walkthrough-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 120px;
+    gap: 40px;
     max-width: 100%;
     justify-content: space-between;
   }
 
-  .wt-group-title { font-size: 24px; margin-bottom: 16px; }
+  .wt-group-title { font-size: 50px; margin-bottom: 16px; }
 
   .btn-grid {
     display: grid;
-    grid-template-columns: repeat(2, 110px);
-    gap: 10px;
+    grid-template-columns: repeat(2, 420px);
+    gap: 20px;
     margin-bottom: 10px;
   }
 
   .ui-btn {
-    padding: 14px 16px;
+    padding: 24px 16px;
     border-radius: 10px;
     font-family: var(--font);
-    font-size: 16px;
+    font-size: 50px;
     cursor: pointer;
     border: none;
     line-height: 1.25;
     text-align: center;
-    min-width: 100px;
+    min-width: 120px;
     transition: transform 0.15s, opacity 0.15s;
   }
   .ui-btn:hover { transform: scale(1.04); opacity: 0.92; }
@@ -352,8 +357,7 @@
   }
 
   .section-label {
-    font-family: sans-serif;
-    font-size: 14px;
+    font-size: 50px;
     font-weight: bold;
     letter-spacing: 2px;
     color: var(--green-dark);
@@ -366,31 +370,30 @@
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px solid rgba(0,0,0,0.06);
+    font-size: 20px;
     font-family: sans-serif;
-    font-size: 14px;
   }
   .tech-row:last-child { border-bottom: none; }
   .tech-tag {
-    font-family: sans-serif;
-    font-size: 12px;
+    font-size: 25px;
     color: var(--green-dark);
     background: rgba(46,139,106,0.12);
     padding: 2px 10px;
     border-radius: 12px;
   }
 
-  .learned-title { font-size: 24px; margin-bottom: 16px; }
+  .learned-title { font-size: 50px; margin-bottom: 16px; }
   .learned-item { margin-bottom: 16px; }
   .learned-item-title {
     font-family: sans-serif;
-    font-size: 14px;
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 4px;
     color: var(--black);
   }
   .learned-item p {
     font-family: sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.6;
     color: #555;
   }
@@ -473,16 +476,23 @@
     grid-template-columns: 1fr 1.3fr;
     gap: 0;
     min-height: calc(100vh - 72px);
+    position: relative;
   }
 
-.about-photo {
-  position: relative;
-  max-width: 550px;
-  margin-left: 300px;
-}
+  .about-photo {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;        /* remove the hardcoded 300px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
 
 .about-photo img {
   width: 100%;
+  max-width: 500px;
   height: auto;
   display: block;
 }
@@ -494,16 +504,16 @@
     overflow-y: auto;
   }
 
-  .about-hi { font-size: 60px; margin-bottom: 16px; }
+  .about-hi { font-size: 48px; margin-bottom: 16px; }
 
   .about-intro, .about-body {
     font-family: var(--font);
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.7;
     margin-bottom: 20px;
   }
 
-  .fun-facts-title, .hobbies-title { font-size: 22px; margin-bottom: 10px; }
+  .fun-facts-title, .hobbies-title { font-size: 40px; margin-bottom: 10px; }
 
   .fun-facts-list, .hobbies-list {
     list-style: none;
@@ -512,7 +522,7 @@
   }
   .fun-facts-list li, .hobbies-list li {
     font-family: var(--font);
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.6;
     padding-left: 24px;
     position: relative;
@@ -529,7 +539,7 @@
     bottom: 0;
     right: 0;
     z-index: 0;
-    width: 300px;
+    width: 400px;
     border-radius: 12px;
     overflow: hidden;
   }
@@ -564,19 +574,19 @@
     margin: 250px 200px;
     background: rgba(255,255,255,0.35);
     backdrop-filter: blur(6px);
-    padding: 32px;
+    padding: 60px;
     border-radius: 4px;
-    max-width: 340px;
+    max-width: 440px;
   }
 
-  .collab-title { font-size: 38px; margin-bottom: 20px; }
+  .collab-title { font-size: 50px; margin-bottom: 20px; }
   .collab-body {
     font-family: var(--font);
-    font-size: 18px;
+    font-size: 25px;
     line-height: 1.6;
     margin-bottom: 24px;
   }
-  .collab-contact-line { font-family: var(--font); font-size: 17px; margin-bottom: 8px; }
+  .collab-contact-line { font-family: var(--font); font-size: 20px; margin-bottom: 8px; }
 
   .contact-right { padding: 60px 48px 40px 48px; display: flex; flex-direction: column; justify-content: center; }
 
