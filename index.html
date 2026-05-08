@@ -130,9 +130,9 @@
             <button class="ui-btn dark" onclick="openOverlay('profile.png')"style="background:#3d7a60;">view Profile<br>Preferences</button>
           </div>
           <div class="btn-grid">
-            <button class="ui-btn dark">view Saved<br>meal card</button>
-            <button class="ui-btn light">view Saved<br>meal detail</button>
-            <button class="ui-btn mid">view Saved<br>meals<br>empty</button>
+            <button class="ui-btn dark" onclick="openOverlay('saved-meal-card.png')">view Saved<br>meal card</button>
+            <button class="ui-btn light" onclick="openOverlay('saved-meal-detail.png')">view Saved<br>meal detail</button>
+            <button class="ui-btn mid" onclick="openOverlay('saved-meals-empty.png')">view Saved<br>meals<br>empty</button>
             <span style="font-family:var(--font);font-size:50px;align-self:center;">Saved<br>meals UI</span>
           </div>
         </div>
@@ -369,7 +369,9 @@
     </div>
   </div>
 </div>
-
+<div id="img-overlay" onclick="closeOverlay()" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:999; align-items:center; justify-content:center;">
+  <img id="overlay-img" src="" style="max-width:90%; max-height:90vh; border-radius:8px;">
+</div>
 <script src="script.js"></script>
 </body>
 </html>
